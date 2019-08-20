@@ -44,7 +44,7 @@ if host_cpu_family == 'sparc'
   endif
 endif
 
-if host_cpu_family == 'x86' or host_cpu_family == 'x86_64'
+if host_cpu_family == 'x86' or host_cpu_family == 'x86_64' or host_system == 'web'
   if cc.compiles('asm (".text; foo: nop; .data; .long foo-.; .text");', name : 'ASM x86 PCREL')
     ffi_conf.set('HAVE_AS_X86_PCREL', 1)
   endif

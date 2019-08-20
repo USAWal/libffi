@@ -16,6 +16,8 @@
 #include "@HEADER@-powerpc.h"
 #elif defined(__powerpc64__)
 #include "@HEADER@-powerpc64.h"
+#elif defined(__EMSCRIPTEN__)
+#include "@HEADER@-@ARCH@.h"
 #else
 #error "Unsupported Architecture"
 #endif

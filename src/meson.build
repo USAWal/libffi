@@ -61,6 +61,11 @@ elif host_cpu_family == 'arm'
   TARGET = 'ARM'
   c_sources = ['ffi.c']
   asm_sources = ['sysv.S']
+elif host_system == 'web'
+  arch_subdir = 'web'
+  TARGET = 'WEB'
+  c_sources = ['ffi.c']
+  asm_sources = []
 endif
 
 if TARGET == ''
